@@ -4,11 +4,11 @@ require '../koneksi.php';
 
 $data_tugas = mysqli_query($conn, "SELECT * FROM sisman");
 
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-    mysqli_query($conn, "DELETE FROM sisman WHERE id_tugas = $id");
-    header('location:tugas.php');
-}
+// if (isset($_GET['id'])) {
+//     $id = $_GET['id'];
+//     mysqli_query($conn, "DELETE FROM sisman WHERE id_tugas = $id");
+//     header('location:index.php');
+// }
 
 ?>
 
@@ -66,7 +66,7 @@ if (isset($_GET['id'])) {
                     <td><?= $data['dihandle'] ?></td>
                     <td><?= $data['status'] ?></td>
                     <td><?= $data['deadline'] ?></td>
-                    <td><a href="ubah.php?id=<?= $data['id_tugas']?>">Ubah data</a> | <a href="tugas.php?id=<?= $data['id_tugas'] ?>">Hapus</a></td>
+                    <td><a href="ubah.php?id=<?= $data['id_tugas']?>">Ubah data</a> | <a href="hapus.php?id=<?= $data['id_tugas'] ?>">Hapus</a></td>
                 </tr>
             <?php } ?>
         </tbody>
