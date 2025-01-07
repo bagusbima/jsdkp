@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql = "INSERT INTO sisman (nama_tugas, dihandle, status, deadline) VALUES ('$nama_tugas', '$dihandle', '$status', '$deadline')";
 
     if (mysqli_query($conn, $sql)) {
-        header('location:tugas.php');
+        header('location:index.php');
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
