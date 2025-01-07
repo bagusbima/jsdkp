@@ -2,7 +2,7 @@
 
 require '../koneksi.php';
 
-$data_tugas = mysqli_query($conn, "SELECT * FROM sisman");
+$data_tugas = mysqli_query($conn, "SELECT * FROM tugas");
 
 // if (isset($_GET['id'])) {
 //     $id = $_GET['id'];

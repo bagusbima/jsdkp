@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $status = $_POST['status'];
     $deadline = $_POST['deadline'];
 
-    $sql = "INSERT INTO sisman (nama_tugas, dihandle, status, deadline) VALUES ('$nama_tugas', '$dihandle', '$status', '$deadline')";
+    $sql = "INSERT INTO tugas (nama_tugas, dihandle, status, deadline) VALUES ('$nama_tugas', '$dihandle', '$status', '$deadline')";
 
     if (mysqli_query($conn, $sql)) {
         header('location:index.php');

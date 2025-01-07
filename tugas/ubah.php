@@ -3,7 +3,7 @@ require '../koneksi.php';
 
 $id = $_GET['id'];
 
-$result = mysqli_query($conn, "SELECT * FROM sisman WHERE id_tugas = $id");
+$result = mysqli_query($conn, "SELECT * FROM tugas WHERE id_tugas = $id");
 $data = mysqli_fetch_assoc($result);
 
 if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
@@ -12,7 +12,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
     $status = $_POST['status'];
     $deadline = $_POST['deadline'];
 
-    $ubah = "UPDATE sisman SET nama_tugas = '$nama_tugas',
+    $ubah = "UPDATE tugas SET nama_tugas = '$nama_tugas',
                                 dihandle = '$dihandle',
                                 status = '$status',
                                 deadline = '$deadline'
