@@ -18,7 +18,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
                                 deadline = '$deadline'
                                 WHERE id_tugas = $id";
     if( mysqli_query($conn, $ubah) ) {
-        header('location:tugas.php');
+        header('location:index.php');
     } else {
         echo "error:". $sql . "<br>" .mysqli_error($conn);
     }
